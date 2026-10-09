@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103e38">
+  <meta name="description" content="Consulta precios de medicamentos en Colombia por unidad, con fuente y fecha. Un proyecto independiente de comparación de precios.">
+  <title>PrecioClaro · Cada unidad cuenta</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23103e38'/%3E%3Cpath d='M12 21l6 6 11-14' stroke='%23d6f79e' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#search">Ir al buscador</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="PrecioClaro, inicio"><span class="brand-icon" aria-hidden="true">✓</span>Precio<span>Claro</span><span class="beta">BETA</span></a>
+    <a class="how-link" href="#method">Cómo comparamos <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow"><span class="status-dot"></span> MEDICAMENTOS EN COLOMBIA</p>
+        <h1 id="page-title">El precio cambia.<br><span>Compara con claridad.</span></h1>
+        <p class="intro-copy">Busca tu medicamento y revisa cuánto cuesta <strong>cada unidad</strong>, con la fuente a un clic.</p>
+      </div>
+      <div class="unit-note"><span class="unit-symbol" aria-hidden="true">÷</span><p>No todas las cajas<br>traen lo mismo.</p><span>Precio del empaque ÷ unidades<br><strong>Ese es el precio que comparamos.</strong></span></div>
+    </section>
+    <section class="search-panel" aria-label="Buscar y filtrar medicamentos">
+      <form id="search-form" role="search">
+        <label for="search">¿Qué medicamento buscas?</label>
+        <div class="search-row"><span aria-hidden="true" class="search-icon">⌕</span><input id="search" name="q" type="search" value="losartán" placeholder="Principio activo o marca" autocomplete="off" maxlength="120"><button class="primary-button" type="submit">Buscar <span aria-hidden="true">→</span></button></div>
+      </form>
+      <div class="quick-search"><span>Explora</span><button data-query="losartán">Losartán</button><button data-query="acetaminofén">Acetaminofén</button><button data-query="ibuprofeno">Ibuprofeno</button><button data-query="loratadina">Loratadina</button></div>
+    </section>
+    <div class="catalog-status"><span id="catalog-summary">Cargando catálogo…</span><span id="updated"></span></div>
+    <section class="workspace" aria-label="Comparación de precios">
+      <aside class="filters">
+        <p class="eyebrow">AFINA TU BÚSQUEDA</p>
+        <label for="group">Sustancia y presentación</label>
+        <select id="group" disabled><option>Cargando…</option></select>
+        <p class="field-help">Separamos concentraciones y formas farmacéuticas.</p>
+        <label for="pharmacy">Farmacia</label><select id="pharmacy" disabled><option value="">Todas las disponibles</option></select>
+        <div class="scope-note"><span class="mini-label">EL ALCANCE, CLARO</span><p id="scope-copy">Primera fuente: La Rebaja. Agregaremos otras farmacias con datos verificables.</p></div>
+        <a class="download-link" href="data/precios.csv" download>Descargar catálogo CSV <span aria-hidden="true">↓</span></a>
+      </aside>
+      <div class="results-area" aria-busy="true" id="results-area">
+        <div class="results-heading"><div><p class="eyebrow">PRECIOS POR UNIDAD</p><h2 id="results-title">Consultando ofertas</h2></div><span id="result-count" class="count-badge">—</span></div>
+        <p class="comparison-note" id="comparison-note">Consultamos precios, no indicamos tratamientos.</p>
+        <div id="feedback" role="status" aria-live="polite"></div>
+        <div id="results" class="results"></div>
+      </div>
+    </section>
+    <section id="method" class="method" aria-labelledby="method-title"><div><p class="eyebrow">SIN LETRA PEQUEÑA</p><h2 id="method-title">La comparación empieza<br>por el dato correcto.</h2></div><ol><li><span>01</span><div><h3>La misma descripción</h3><p>Agrupamos por sustancia, concentración, forma y liberación declarada. Esto no certifica equivalencia terapéutica.</p></div></li><li><span>02</span><div><h3>Una unidad a la vez</h3><p>Ordenamos por el precio de cada tableta o cápsula. El valor del empaque también queda visible.</p></div></li><li><span>03</span><div><h3>Siempre puedes verificar</h3><p>Cada oferta tiene fecha y enlace. Confirma en la farmacia el valor final, disponibilidad y envío a tu ciudad.</p></div></li></ol></section>
+    <p class="medical-notice"><span aria-hidden="true">ⓘ</span> PrecioClaro compara precios; no reemplaza la indicación de tu médico o farmacéutico.</p>
+  </main>
+  <footer><span class="footer-brand">PrecioClaro<span> · Cada unidad cuenta.</span></span><span>Proyecto independiente · Hecho en Colombia</span></footer>
+  <noscript><p>Activa JavaScript para buscar. También puedes descargar <a href="data/precios.csv">el catálogo con sus fuentes</a>.</p></noscript>
+</body>
+</html>

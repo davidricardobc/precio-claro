@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+data/raw/
+data/archive/
+artifacts/
+*.log
+node_modules/

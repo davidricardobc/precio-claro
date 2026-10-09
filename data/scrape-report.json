@@ -1,0 +1,1778 @@
+{
+  "consultado_en": "2026-10-08T20:36:34-05:00",
+  "fuente": "https://www.larebajavirtual.com",
+  "user_agent": "PrecioClaro/0.1 (educational price comparison; manual collection)",
+  "terminos": [
+    "losartan",
+    "acetaminofen",
+    "ibuprofeno",
+    "atorvastatina",
+    "metformina",
+    "omeprazol",
+    "loratadina",
+    "amlodipino",
+    "dolex",
+    "advil"
+  ],
+  "consultas": [
+    {
+      "termino": "losartan",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=losartan&_from=0&_to=49",
+      "productos": 17
+    },
+    {
+      "termino": "acetaminofen",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=acetaminofen&_from=0&_to=49",
+      "productos": 50
+    },
+    {
+      "termino": "acetaminofen",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=acetaminofen&_from=50&_to=99",
+      "productos": 50
+    },
+    {
+      "termino": "acetaminofen",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=acetaminofen&_from=100&_to=149",
+      "productos": 50
+    },
+    {
+      "termino": "acetaminofen",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=acetaminofen&_from=150&_to=199",
+      "productos": 47
+    },
+    {
+      "termino": "ibuprofeno",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=ibuprofeno&_from=0&_to=49",
+      "productos": 50
+    },
+    {
+      "termino": "ibuprofeno",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=ibuprofeno&_from=50&_to=99",
+      "productos": 50
+    },
+    {
+      "termino": "ibuprofeno",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=ibuprofeno&_from=100&_to=149",
+      "productos": 11
+    },
+    {
+      "termino": "atorvastatina",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=atorvastatina&_from=0&_to=49",
+      "productos": 19
+    },
+    {
+      "termino": "metformina",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=metformina&_from=0&_to=49",
+      "productos": 38
+    },
+    {
+      "termino": "omeprazol",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=omeprazol&_from=0&_to=49",
+      "productos": 19
+    },
+    {
+      "termino": "loratadina",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=loratadina&_from=0&_to=49",
+      "productos": 26
+    },
+    {
+      "termino": "amlodipino",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=amlodipino&_from=0&_to=49",
+      "productos": 46
+    },
+    {
+      "termino": "dolex",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=dolex&_from=0&_to=49",
+      "productos": 22
+    },
+    {
+      "termino": "advil",
+      "url": "https://www.larebajavirtual.com/api/catalog_system/pub/products/search?ft=advil&_from=0&_to=49",
+      "productos": 22
+    }
+  ],
+  "descartes": [
+    {
+      "producto": "LOSARTAN 50 MG + HIDROCLOROTIAZIDA 12.5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LOSARTAN  POTASICO/ HIDROCLOROTIAZIDA 50/12.5 MG (AG)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LOSARTAN + HIDROCLOROTAZIDA 50 MG /12.5MG (ECAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LOSARTAN + HIDROCLOROTIAZIDA 50 MG + 12.5 MG (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LOSARTAN HCT 100/12.5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LOSARTAN 100 MG + HIDROCLOROTIAZIDA 25 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LOSARTAN 100 MG (GENFAR)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "LOSARTAN POTASICO 50 MG (AG)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "LOSARTAN POTASICO 50 MG (AG)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "SATOREN 50 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ARANDA 5 MG/100 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (GENFAR)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (GENFAR)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN + CODEINA 325/30 MG (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN + CODEINA 325/30 MG (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 150 MG JARABE (COASPHARMA)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "ACETAMINOFEN 150 MG JARABE (COASPHARMA)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "ACETAMINOFEN 100 MG/ML  COASPHARMA (DOLINFAR)",
+      "razon": "combinación o concentración ambigua"
+    },
+    {
+      "producto": "HIOSCINA N-BUTILBROMURO 10 MG + ACETAMINOFEN 325 MG (COASPHARMA)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ZAS NOCHE PANELA LIMON",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ZAS NOCHE PANELA LIMON",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ZAS JARABE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLICOX FORTE MAX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX FORTE MAX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX FORTE MAX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX JARABE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLICOX",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOXPEN 37.5/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOXPEN 37.5/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACELIFEN GOTAS",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLICOX GRIP",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX GRIP NOCHE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ZAS ANTIGRIPAL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ZAS ANTIGRIPAL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GRIPAC",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLICOX GRIP",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX GRIP",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (LA SANTE)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (LA SANTE)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "TRAMADOL + ACETAMINOFEN (MK) 37.5MG/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN + CODEINA 325/8 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN + CODEINA 325/30 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN JARABE NIÑOS 160 MG/5 ML (MK)",
+      "razon": "combinación o concentración ambigua"
+    },
+    {
+      "producto": "ACETAMINOFEN + TIZANIDINA (MK) 350 MG + 2 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ASA MK 100 MG (MK)",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ACETAMINOFEN FORTE (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN FORTE (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN JARABE (AMERICAN GENERICS)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (AG)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (AG)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN + HIDROCODONA 325/5MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN 100 MG / ML (MK) GOTAS",
+      "razon": "combinación o concentración ambigua"
+    },
+    {
+      "producto": "VICK FORT-9 MULTISINTOMAS GRIPAL ACETAMINOFEN CLORFENIRAMINA Y FENILEFRINA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN + CODEINA 325/30 MG (AG)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NODOL FORTE 325/30 MG (ACETAMINOFEN + CODEINA)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "SEVEDOL EXTRAFUERTE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "SEVEDOL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CORICIDIN GOTAS",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "OFERTA SEVEDOL EXTRA FUERTE PRECIO ESPECIAL 8 TAB + 16 TAB",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TABCIN ACTIVE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TABCIN ACTIVE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "SEVEDOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLIREN 5/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLICOX 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "SEVEDOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CRONOFEN 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "FLEXIMAX ACE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "APRIX F",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLOFEN 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CRONOFEN NIÑOS GOTAS",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CRONOFEN L JBE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLOFEN 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLOFEN GRIPA 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "PAX DIA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IBUFLASH MIGRAN",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PAX DIA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "WINADEINE F 325/30 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPAS FAST TOTAL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CONGESTEX KIDS JBE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLOFEN 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NORAVER GRIPA FAST TOTAL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "WINADEINE F 325/30 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "WINADEINE 325/8 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "SINALGEN 5/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLOFF 5-325",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX GRIPA",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUFLASH MIGRAN",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "OFERTA DOLEX FORTE 500 MG PAGUE 17 LLEVE 20",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "FENALGEX 325/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "FENALGEX 325/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA DIA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX FORTE 500 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "SINALGEN MAX 10/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADOL PRO 325MG / 5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX FORTE 500 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IBUFLASH MIGRAN",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "MEJORALITO NIÑOS JARABE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "SINALGEN FORTE 7.5/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX AVANZADO 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NORAVER GRIPA NOCHE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX ACTIVGEL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NOXPIRIN DIA GRANULADO",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX ACTIVGEL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLEX AVANZADO",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TIZAFEN",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADOREM 150 MG JARABE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLEX PEDIATRICO MASTICABLE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NORAVER GRIPA DIA NARANJA CAJA X 12 SOBRES",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX NIÑOS SYRUP",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLEX AVANZADO 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLEX PEDIATRICO MASTICABLE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NORAVER GRIPA DIA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA DIA NARANJA CAJA X 12 SOBRES",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX AVANZADO 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NORAVER GRIPA NOCHE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "X RAY DOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "OFERTA XRAYDOL PAGUE 28 LLEVE 36",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TAFLAX FORTE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "X RAY DOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DESCONGEL GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX FORTE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "X RAY DOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PAX NOCHE LIMON CJA X 6 SOBRES",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PAX NOCHE PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DESCONGEL GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DURAFLEX MUSCULAR ADVANCE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN F CALIENTE NOCHE PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "FLUZETRIN F JBE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DURAFLEX MUSCULAR ADVANCE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN PLUS",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN PLUS",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DURAFLEX MUSCULAR ADVANCE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN F CALIENTE NOCHE PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DESCONGEL GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN F CALIENTE NOCHE PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NEXT DUO GL GRIPA Y TOS",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN QUICK GEL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN KIDS JARABE 2+AÑOS GENFAR FRUTOS ROJOS (GENFAR)",
+      "razon": "combinación o concentración ambigua"
+    },
+    {
+      "producto": "DOLICOX GRIP NOCHE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GRIPAC",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ACETAMINOFEN FORTE  (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN FORTE  (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN + CAFEINA (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (MEMPHIS)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN JARABE (AMERICAN GENERICS)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "ACETAMINOFEN 500 MG (MEMPHIS)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "ACETAMINOFEN + CAFEINA (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN KIDS GOTAS 100 MG (GENFAR)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "ACETAMINOFEN + HIDROCODONA BITARTRATO 325MG / 5MG (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACETAMINOFEN + CODEINA 325/30 MG (AG)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TRAMADOL + ACETAMINOFEN 37.5 MG/325 MG (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "O.K.A.P FORTE (ACETAMINOFEN 250 MG + CAFEINA 20 MG) CAPSULA BLANDA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TABCIN ACTIVE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TABCIN NOCHE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TABCIN NOCHE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TABCIN NOCHE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ACODEIN 30 MG/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ACODEIN 30 MG/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "APRIX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "OFERTA SEVEDOL PRECIO ESPECIAL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ZALDIAR 37.5 MG/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ZALDIAR 37.5 MG/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "SINALGEN 5/325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLOFF 7.5-325 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOCEFAL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLOFF 5-325",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA FAST TOTAL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "JAQUEDOL (750/350 MG)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "OFERTA MOVIDOL PAGUE 8 LLEVE 12",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "MEJORAL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "LUMBAL MAX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LUMBAL MAX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX FORTE PAGUE 15 LLEVE 20",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LUMBAL MAX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TOLMUS 325/37.5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ALGIMIDE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLOFEN XTRA UNIGEL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN DIA GRANULADO",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA DIA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADOREM 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ALGIMIDE NF",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NOXPIRIN DIA GRANULADO",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADOREM 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLOFEN XTRA UNIGEL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "WINADOL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "WINADOL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLEX 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "FASTFEN JBE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX RAPIDA ACCION",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NEXT GL NOCHE ANTIGRIPAL PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NEXT GL NOCHE ANTIGRIPAL PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PAX NOCHE PANELA LIMON",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 600 MG(COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 600 MG(COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO + METOCARBAMOL (COASPHARMA)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IBUPROFENO 400 MG (COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 400 MG (COASPHARMA)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO JARABE 100 MG (COASPHARMA)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "IBUDOL 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUDOL CAF",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUDOL SOFT 400  MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "PIREFEN 800 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "PIREFEN 800 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUDOL SOFT 400  MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TROSIFEN 200 MG SUSPENSION",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "RELADOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PIREFEN 200 SUSPENSION",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "PIREFEN COMPUESTO",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PIRE-FEN 600 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "PIREFEN COMPUESTO",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "RELADOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PIRE-FEN 600 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUPROFENO SUSP 100 MG (LA SANTE)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "IBUPROFENO 400 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 400 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "METOCARBAMOL / IBUPROFENO 500/200 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NEXT IBUPROFENO GRIPA",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "NEXT IBUPROFENO GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NEXT IBUPROFENO GRIPA",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (GENFAR)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (AG)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (AG)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 800 MG (GENFAR)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "NEXT GL GRIPA (IBUPROFENO + FENILEFRINA+CETIRIZINA) SUPER OFERTA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "SEVEDOL EXTRA FUERTE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "SEVEDOL EXTRA FUERTE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUFLASH ULTRA FORTE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TIOCOLSID 4 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "FLECTADOL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TIOMED FORTE 400 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL ULTRA",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL MAX X 10 CAPS",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUFLASH ULTRA FORTE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CALMIDOL MAX",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL MAX 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "OFERTA ADVIL MAX PAGUE 16 LLEVE 20 TABLETAS",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CALMIDOL COMPUESTO",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL MAX X 16 CAPS",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TIOCOLFEN 400 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL MAX 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOVIR",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IBUFLASH 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL GRIPA X 10 CAPS",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL ESPALDA Y CUELLO - ADVIL BACK & NECK",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA Y TOS FAST TOTAL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA Y TOS FAST TOTAL",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL ULTRA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL ULTRA CAPSULA LIQUIDA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL ULTRA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL GRIPA X 72",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL GRIPA X 72",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLORSIN FEM DISPLAY X 10 BLISTER DE 4 CAPSULAS C/U",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL CHILDREN SINGLE PR X100ML",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CONGESTEX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CONGESTEX",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GOFEN FORTE 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL CHILDREN SINGLE PR X60ML",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLORSIN FEM DISPLAY X 10 BLISTER DE 4 CAPSULAS C/U",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GOFEN FORTE 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ROBAXIN GOLD",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL FEM",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NORAVER GRIPA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "FLUENZ T",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL GRIPA MAX GELCAP 400 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ADVIL GRIPA MAX GELCAP 400 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IBUPROFENO 400 MG (GENFAR)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 400 MG (GENFAR)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 600 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO 600 MG (MK)",
+      "razon": "venta fraccionada fuera de alcance"
+    },
+    {
+      "producto": "IBUPROFENO GENFAR KIDS DOLOR Y FIEBRE",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "IBUPROFENO MK 100 MG / 5 ML SUSPENSION ORAL NI",
+      "razon": "combinación o concentración ambigua"
+    },
+    {
+      "producto": "IBUFLASH 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "MOTRIN 800 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUFLASH 400 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "RODALGIN COMPLEX 400/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "MOTRIN 600 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL ULTRA CAPSULA LIQUIDA",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CALMIDOL MAX",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "PARALGEN PLUS",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CALMIDOL MAX",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL TEENS GELCAPS 200 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "IBUFLASH",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "FYNEXIN GEL",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL GRIPA MAX GELCAP 400 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "FARMALIP 40 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "FARMALIP 20 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "EZETIMIBE / ATORVASTATINA 10/20 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LIPITOR 20 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ATORVASTATINA  40 MG (COASPHARMA)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "ATORVASTATINA 40 MG (SANDOZ)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "ATORVASTATINA 20 MG MEMPHIS",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "LIPITOR 80 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "LIPITOR 10 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "LIPITOR 20 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "COLMIBE 10MG/10MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COLMIBE 20 MG/10 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "METFORMINA + VILDAGLI (MK) 850/50 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "METFORMINA + VILDAGLIP (MK) 1G/50 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GLUCOPHAGE XR 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "GLUCOPHAGE XR 1000 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "GLUCOPHAGE 850 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "GLUCOPHAGE XR 750 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "GLUCOPHAGE 1000 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "GLUCOPHAGE 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TRAYENTA DUO 2.5 MG/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GALVUS MET 50/850 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GALVUS MET 50/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GALVUS MET 50/500 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GALVUS MET 50/850 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JARDIANCE DUO 12.5/850 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JANUMET XR 50/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JANUMET 50 MG/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JARDIANCE DUO 12.5/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "XIGDUO XR 10/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "XIGDUO XR 5/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PREDIAL LEX 500 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "G-MET 1000 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "METAGLICOZ 750 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "G-MET 850 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "TRAYENTA DUO 2.5 MG/850 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "AMARYL M 2/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "AMARYL M 4/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "KOMBIGLYZE XR 5 MG/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "GALVUS MET 50/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JANUMET 50 MG/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JANUMET XR 50/1000 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JANUMET 50 MG/ 850 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "JANUMET 50 MG/850 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "PROPISOL 20 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ESOMEPRAZOL 40 MG (LA SANTE)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ESOMEPRAZOL 40 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ESOMEPRAZOL 20 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ESOMEPRAZOL 40 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ESOMEPRAZOL 20 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ESOMEPRAZOL 20 MG (AG)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ORAZOLE 40 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ESOMEPRAZOL 20 MG (LA SANTE)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "OMEPRAZOL 20 MG (AG)",
+      "razon": "principio activo ausente o múltiple"
+    },
+    {
+      "producto": "ESOMEPRAZOL 40 MG (COLMED)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ESOMEPRAZOL 20 MG (COLMED)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ORAZOLE 40 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DESLORATADINA 5 MG (GENFAR)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LORATADINA 1 MG JBE (COASPHARMA)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "DESLORATADINA 5 MG (COASPHARMA)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DESLORATADINA JARABE (COASPHARMA)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "HISTAPEN 10 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "HISTAPEN JBE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "LORATADINA 5 MG (LA SANTE)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "DESLORATADINA 2.5 MG (LA SANTE)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DESLORATADINA 5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DESLORATADINA 0.05 MG CHICLE NIÑOS (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "NEUMOLEX JARABE",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LORATADINA 10 MG (GENFAR)",
+      "razon": "cantidad por empaque ausente o ambigua"
+    },
+    {
+      "producto": "DESLORATADINA 5 MG (LA SANTE)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "LORATADINA 1 MG (MK)",
+      "razon": "forma no incluida"
+    },
+    {
+      "producto": "LORATADINA 10 MG (MEMPHIS)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "LORATADINA 5 MG / 5 ML JARABE (MEMPHIS)",
+      "razon": "combinación o concentración ambigua"
+    },
+    {
+      "producto": "CLARITYNE D",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CLARITYNE 10 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "NASMINE NF",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "VALSARTAN + AMLODIPINO 80/5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "VALSARTAN + AMLODIPINO 160/5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "VARTERAL 160/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE FCT 5/160",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "MICARDIS AMLO 80 MG /5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE FCT 320/10",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE FCT 5/80",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "MICARDIS AMLO 80 MG /10 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE FCT 320/5",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COVERAM 10/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE HCT 160/5/12.5",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE HCT 160/10/12.5",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE HCT 10/320/25",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COVERATRIX 10MG/2.5MG/10 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COVERATRIX 5MG/1.25MG/ 5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COVERATRIX 5MG/1.25MG/10 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TELMISARTAN + AMLODIPINO 80MG/5MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "TELMISARTAN+AMLODIPINO 80/10MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IRBESARTAN+AMLODIPINO 150 MG/5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IRBESARTAN+AMLODIPINO 300 MG/5 MG (MK)",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "AMLODIPINO 5 MG  (MEMPHIS)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "AMLODIPINO 5 MG (AG)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "AMLODIPINO 10 MG (AG)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "AMLODIPINO 10 MG (AG)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "AMLODIPINO 5 MG (AG)",
+      "razon": "sin disponibilidad"
+    },
+    {
+      "producto": "NORVAS 5 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "VARTERAL 160/10 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ILTUXAM 40/10 MG",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "CONCOR AM 5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CARDIOCAP A 80/5",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "IRBEPREX A 150/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "CARDIOCAP A 80/10",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "EXFORGE FCT 10/160",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "APROVASC 150 MG/10 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COVERAM 5/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "COVERATRIX/10MG/2.5MG/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "ILTUXAM 20/5 MG",
+      "razon": "principio activo fuera de alcance o combinación"
+    },
+    {
+      "producto": "DOLEX NINOS 2 + JARABE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "DOLEX NINOS 7 + JARABE",
+      "razon": "principio activo no corroborado en el nombre"
+    },
+    {
+      "producto": "ADVIL ESPALDA Y CUELLO - ADVIL BACK & NECK",
+      "razon": "principio activo ausente o múltiple"
+    }
+  ],
+  "errores": [],
+  "publicado": true,
+  "filas_validas": 39,
+  "productos_unicos": 456,
+  "resumen_descartes": {
+    "principio activo fuera de alcance o combinación": 232,
+    "sin disponibilidad": 12,
+    "principio activo no corroborado en el nombre": 117,
+    "venta fraccionada fuera de alcance": 36,
+    "forma no incluida": 11,
+    "combinación o concentración ambigua": 6,
+    "principio activo ausente o múltiple": 2,
+    "cantidad por empaque ausente o ambigua": 1
+  }
+}

@@ -1,0 +1,44 @@
+# Verificación de PrecioClaro
+
+Fecha: 8 de octubre de 2026. Entrega local inicial.
+
+Recorrido: catálogo público de La Rebaja → scraper → CSV validado → búsqueda en el navegador → presentación del precio por unidad → enlace de origen.
+
+## Evidencia
+
+| Límite del flujo | Resultado |
+|---|---|
+| robots.txt → consulta | robots.txt respondió 200 y permitió la ruta pública; User-Agent propio y mínimo 1,5 segundos entre consultas |
+| API → extracción | 15 páginas consultadas, 456 productos únicos; 39 filas admitidas y 417 descartadas con razón |
+| Extracción → archivo | `data/precios.csv`, `scrape-latest.csv`, `scrape-report.json` y `catalog-meta.json` generados; respuestas originales en `data/raw/` |
+| Archivo → navegador | HTTP 200, 39 filas válidas, cero descartes adicionales por el validador del navegador |
+| Búsqueda → presentación | Losartán 50 mg: 4 ofertas; 100 mg: 2 ofertas; búsqueda inexistente: 0 ofertas con mensaje específico |
+| Orden por unidad | Amlodipino 5 mg: empaque de 30 a COP 24.840 aparece antes del de 10 a COP 8.830, porque COP 828/unidad es menor que COP 883/unidad |
+| Enlace → fuente | Una ficha real de losartán respondió HTTP 200; enlaces HTTPS abren otra pestaña con `noopener noreferrer` |
+| Celular y escritorio | Anchos 360, 390, 768 y 1440: sin desbordamiento horizontal; aviso médico dentro del viewport |
+| Ampliación | Simulación CSS al 200 % sin desbordamiento horizontal. No equivale a una auditoría completa con tecnologías de asistencia |
+| Teclado | Tab desde la búsqueda alcanza el botón Buscar; foco visible |
+| Error remoto | Un HTTP 503 simulado para el CSV muestra «No pudimos cargar los precios» y no muestra ofertas inventadas |
+| JavaScript | Sin errores de ejecución en los recorridos probados; `node --check` correcto en ambos módulos |
+| Archivos privados | Servidor devuelve 404 para `/.git/config`, `/data/raw/` y `/scraper.py`; solo expone la lista de archivos públicos |
+
+## Pruebas automatizadas
+
+- `python -m unittest discover -s tests -v`: **6 pruebas correctas**, incluyendo bloqueo por robots, cálculo con redondeo, rechazo de mezclas y preservación del catálogo ante una falla.
+- `node --test tests/catalog.test.mjs`: **6 pruebas correctas**, incluyendo CSV con comillas y saltos de línea, datos inválidos, separación de grupos, comparación por unidad y el catálogo real.
+- AGENTS.md y CLAUDE.md comparados: iguales.
+
+Los datos de prueba sintéticos no se incorporan a `data/precios.csv`. La prueba de fallo de actualización usa un directorio temporal independiente.
+
+## Evidencia visual local
+
+`artifacts/desktop.png` y `artifacts/mobile.png`, fuera de Git. Se inspeccionaron ambas capturas. El aviso fijo puede aparecer en medio de una captura de página completa porque corresponde al borde inferior del viewport, no al final del documento.
+
+## Límites y pendientes
+
+- Una farmacia conectada. La comparación entre cadenas queda pendiente de recibir o conectar sus datos.
+- La consistencia automática no sustituye verificación farmacéutica. Las fichas ambiguas se excluyen y se conservan para revisar.
+- No se probaron compra, domicilios o disponibilidad por ciudad: no forman parte de esta demo.
+- El adaptador opcional WebMCP está protegido por detección de disponibilidad. El navegador de pruebas no expuso `document.modelContext`; no se verificó en un navegador compatible. La búsqueda normal sí se verificó.
+- No se realizó una auditoría completa de accesibilidad.
+- Sin pruebas de hosting porque no se ha autorizado ni realizado ninguna publicación.

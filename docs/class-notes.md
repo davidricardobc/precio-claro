@@ -41,3 +41,11 @@ Diferencias observadas al ejecutar:
 Recibida e implementada el 8 de octubre. Se descargó `https://raw.githubusercontent.com/celismx/recetapp-datos/main/data/precios.csv` en `data/base.csv`, con 563 filas y 12 columnas. Se unió con nuestra consulta por URL de La Rebaja, con preferencia por la local. La salida conserva exactamente esas 12 columnas. El caso sin consulta local está implementado y probado.
 
 Resultado: 565 filas, 25 principios activos, 98,23 % con precio por unidad. Ver `docs/data-summary.md` para el desglose por farmacia y las tres diferencias mayores entre marcas. El punto 1 de pendientes queda completado; las fuentes Locatel y Olímpica ya están importadas, pero sus scrapers propios siguen pendientes.
+
+## Captura 5: el momento del ahorro
+
+Se agregó «Misma sustancia, más barato» al seleccionar una tarjeta, con el mínimo por unidad para sustancia + concentración, diferencia porcentual, ahorro proporcional en pesos y enlace a farmacia. También informa cuando el producto ya tiene el precio mínimo o no hay unidades válidas.
+
+Los ejemplos de la clase se comprobaron con datos reales: Cozaar 50 mg de Locatel → Genfar de La Rebaja, 96,65 %; Dolex Activgel de 10 cápsulas → Genfar de Locatel, 89,59 %. El segundo compara presentaciones distintas o no identificadas completamente. Esa limitación aparece antes de la cifra, sin sugerir una sustitución médica.
+
+Se conserva el criterio más estricto de la lista principal. El nuevo panel es una comparación económica y además muestra el costo de empaques completos para que un ahorro proporcional no parezca un precio de compra.

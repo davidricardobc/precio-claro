@@ -1,12 +1,12 @@
-import { parseCSV, validateRows, findGroups, normalize } from './catalog.mjs';
+import { parseCSV, validateRows, findGroups, normalize, matchesQuery, calculateSavings, safeProductURL } from './catalog.mjs';
 const $ = id => document.getElementById(id);
 const cop = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 2 });
 const dateFormat = new Intl.DateTimeFormat('es-CO', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Bogota' });
 const titleCase = text => text.toLocaleLowerCase('es-CO').replace(/^\p{L}/u, c => c.toLocaleUpperCase('es-CO'));
-const dateLabel = value => dateFormat.format(new Date(value.includes('T') ? value : value + 'T12:00:00-05:00'));
+const dateLabel = value => { const date = new Date(value.includes('T') ? value : value + 'T12:00:00-05:00'); return Number.isFinite(date.getTime()) ? dateFormat.format(date) : 'Fecha no disponible'; };
 const pluralForm = row => row.forma === 'capsula' ? 'cápsulas' : 'tabletas';
 const groupLabel = row => `${titleCase(row.principio_activo)} ${row.concentracion.toLowerCase()} · ${pluralForm(row)}${row.liberacion !== 'no especificada' ? ' · ' + row.liberacion : ''}`;
-let catalog = [], groups = [], rejectedCount = 0;
+let catalog = [], groups = [], rejectedCount = 0, allRecords = [], otherRecords = [];
 
 function element(tag, className, text) {
   const node = document.createElement(tag); if (className) node.className = className;
@@ -16,19 +16,36 @@ function message(title, description) {
   const box = element('div', 'feedback'); box.append(element('h3', '', title), element('p', '', description));
   $('feedback').replaceChildren(box); $('results').replaceChildren();
 }
-function offerCard(row, best) {
+function offerCard(row, best, unclassified = false) {
   const card = element('article', 'offer' + (best ? ' best' : ''));
   if (best) card.append(element('span', 'best-label', '✓ MENOR PRECIO REGISTRADO POR UNIDAD'));
   const info = element('div', 'offer-info');
   info.append(element('p', 'offer-brand', row.marca || 'MARCA NO INFORMADA'), element('h3', '', titleCase(row.producto)),
-    element('p', 'presentation', `${titleCase(row.presentacion)} · ${row.unidades} ${pluralForm(row)}`),
+    element('p', 'presentation', `${titleCase(row.presentacion)}${row.forma && Number(row.unidades) > 0 ? ` · ${row.unidades} ${pluralForm(row)}` : ''}`),
     element('p', 'pharmacy', row.farmacia), element('p', 'offer-date', `Consultado: ${dateLabel(row.fecha)}`));
   const price = element('div', 'price-column');
   const link = element('a', 'pharmacy-link', 'Ver en farmacia'); link.href = row.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
   link.setAttribute('aria-label', `Ver ${row.producto} en ${row.farmacia}, abre otra pestaña`); link.append(element('span', '', '↗'));
-  price.append(element('span', 'unit-price', cop.format(row.precio_unidad)), element('span', 'unit-label', `COP / ${row.forma === 'capsula' ? 'cápsula' : 'tableta'}`),
-    element('p', 'pack-price', `${cop.format(row.precio)} el empaque`), link);
+  const hasUnitPrice = Number.isFinite(Number(row.precio_unidad)) && Number(row.precio_unidad) > 0;
+  price.append(element('span', 'unit-price', hasUnitPrice ? cop.format(Number(row.precio_unidad)) : '—'), element('span', 'unit-label', hasUnitPrice ? `COP / ${row.forma === 'capsula' ? 'cápsula' : row.forma === 'tableta' ? 'tableta' : 'unidad reportada'}` : 'Sin precio por unidad'),
+    element('p', 'pack-price', Number(row.precio) > 0 ? `${cop.format(Number(row.precio))} el empaque` : 'Sin precio verificable'));
+  if (safeProductURL(row.url)) price.append(link);
+  const compare = element('button', 'compare-button', unclassified ? 'Revisar comparación →' : 'Calcular ahorro →');
+  compare.type = 'button'; compare.setAttribute('aria-label', `Comparar ahorro de ${row.producto} en ${row.farmacia}`);
+  compare.setAttribute('aria-haspopup', 'dialog'); compare.addEventListener('click', () => showSavings(row));
+  info.append(compare);
   card.append(info, price); return card;
+}
+function renderOtherRecords(selected) {
+  const pharmacy = $('pharmacy').value;
+  const rows = otherRecords.filter(row => matchesQuery(row, $('search').value) && (!pharmacy || row.farmacia === pharmacy)
+    && (!selected || normalize(row.principio_activo) === normalize(selected.principio_activo)
+      && normalize(row.concentracion) === normalize(selected.concentracion)));
+  $('other-records').hidden = !rows.length;
+  $('other-records').open = !selected && rows.length > 0;
+  $('other-records-title').textContent = `Otras presentaciones y datos pendientes (${rows.length})`;
+  $('other-results').replaceChildren(...rows.map(row => offerCard(row, false, true)));
+  return rows.length;
 }
 function renderOffers() {
   $('feedback').replaceChildren();
@@ -37,8 +54,16 @@ function renderOffers() {
     $('results-title').textContent = 'Sin coincidencias'; $('result-count').textContent = '0 ofertas';
     $('comparison-note').textContent = 'Prueba con el principio activo o con otra marca.';
     message('No encontramos ese medicamento', 'El catálogo aún es limitado. Prueba losartán, acetaminofén o borra tu búsqueda para explorar.');
+    const otherCount = renderOtherRecords(null);
+    if (otherCount) {
+      $('results-title').textContent = 'Revisa la presentación';
+      $('result-count').textContent = `${otherCount} ${otherCount === 1 ? 'ficha' : 'fichas'}`;
+      $('comparison-note').textContent = 'Encontramos fichas que requieren revisar su presentación o completar datos.';
+      $('feedback').replaceChildren();
+    }
     return;
   }
+  renderOtherRecords(selected.offers[0]);
   const pharmacy = $('pharmacy').value;
   const offers = selected.offers.filter(r => !pharmacy || r.farmacia === pharmacy);
   $('results-title').textContent = groupLabel(selected.offers[0]);
@@ -59,6 +84,69 @@ function search(query) {
   for (const button of document.querySelectorAll('[data-query]')) button.setAttribute('aria-pressed', String(normalize(button.dataset.query) === normalize(query)));
   renderOffers();
 }
+
+function comparisonProduct(row, label) {
+  const box = element('div', 'comparison-product');
+  box.append(element('p', 'eyebrow', label), element('h3', '', titleCase(row.producto)),
+    element('p', '', `${row.farmacia} · ${titleCase(row.presentacion)}`),
+    element('strong', 'comparison-unit-price', `${cop.format(row.exactUnitPrice)} por unidad`),
+    element('p', 'offer-date', `Precio del empaque: ${cop.format(row.precio)} · Consulta: ${dateLabel(row.fecha)}`));
+  return box;
+}
+function showSavings(row) {
+  const result = calculateSavings(row, allRecords);
+  const content = $('savings-content'); content.replaceChildren();
+  if (result.status === 'missing_units' || result.status === 'invalid_price') {
+    const missing = result.status === 'missing_units';
+    content.append(element('h3', '', missing ? 'No podemos comparar sin las unidades' : 'No podemos verificar esta comparación'),
+      element('p', '', titleCase(row.producto)), element('p', '', missing
+        ? 'Esta ficha no informa una cantidad válida de unidades por empaque. No calculamos un precio por unidad ni un ahorro por suposición.'
+        : 'Faltan datos válidos o el precio por unidad no coincide con el precio y la cantidad del empaque.'));
+  } else {
+    const { current, cheapest } = result;
+    const hero = element('div', 'savings-hero');
+    if (result.status === 'already_cheapest') {
+      hero.append(element('p', 'eyebrow', 'EL MENOR PRECIO REGISTRADO'), element('h3', '', 'Este producto ya tiene el menor precio por unidad'),
+        element('p', '', 'Puede compartir el primer lugar con otras ofertas. No encontramos una opción de menor precio con la misma sustancia y concentración.'));
+      content.append(hero, comparisonProduct(current, 'TU SELECCIÓN'));
+      const source = element('a', 'savings-source', `Ver oferta en ${current.farmacia} ↗`);
+      source.href = safeProductURL(current.url); source.target = '_blank'; source.rel = 'noopener noreferrer'; content.append(source);
+    } else {
+      hero.append(element('p', 'eyebrow', 'AHORRO POTENCIAL POR PRECIO'),
+        element('div', 'savings-percent', `${new Intl.NumberFormat('es-CO', { maximumFractionDigits: 2 }).format(result.percent)} %`),
+        element('p', '', `${cop.format(result.unitSaving)} menos por unidad · ${titleCase(current.principio_activo)} ${current.concentracion.toLowerCase()}`));
+      content.append(hero);
+      const cards = element('div', 'comparison-products');
+      cards.append(comparisonProduct(current, 'PRODUCTO SELECCIONADO'), comparisonProduct(cheapest, 'MENOR PRECIO POR UNIDAD'));
+      content.append(cards);
+      const total = element('div', 'savings-total');
+      total.append(element('h3', '', `Para la misma cantidad: ${result.quantity} unidades`),
+        element('p', '', `${cop.format(current.precio)} → ${cop.format(result.equivalentCost)} de valor proporcional.`),
+        element('strong', '', `${cop.format(result.quantitySaving)} de ahorro proporcional`));
+      content.append(total);
+      if (result.purchaseUnits !== result.quantity) {
+        content.append(element('p', 'pack-explanation', `El empaque de la alternativa trae ${cheapest.unidades} unidades. Para cubrir ${result.quantity}, comprarías ${result.packsNeeded} ${result.packsNeeded === 1 ? 'empaque' : 'empaques'} por ${cop.format(result.purchaseCost)} (${result.purchaseUnits} unidades). El valor proporcional no es el precio de compra.`));
+      } else {
+        content.append(element('p', 'pack-explanation', `La misma cantidad se cubre con ${result.packsNeeded} ${result.packsNeeded === 1 ? 'empaque' : 'empaques'} de ${cheapest.unidades} unidades: ${cop.format(result.purchaseCost)}, antes de envío.`));
+      }
+      const source = element('a', 'savings-source', `Ver ${titleCase(cheapest.marca || cheapest.producto)} en ${cheapest.farmacia} ↗`);
+      source.href = safeProductURL(cheapest.url); source.target = '_blank'; source.rel = 'noopener noreferrer'; content.append(source);
+    }
+    const scopeNotice = element('p', result.samePresentation ? 'comparison-scope' : 'presentation-warning', result.samePresentation
+      ? 'Comparación económica entre registros con la misma sustancia y concentración. Coincide la forma descrita, pero esto no certifica equivalencia terapéutica. Confirma la presentación antes de cambiar.'
+      : 'Atención: las presentaciones son distintas o no están completamente identificadas. El porcentaje compara precios por unidad, no demuestra que un medicamento pueda reemplazar al otro. Consulta con tu médico o farmacéutico.');
+    if (result.samePresentation) content.append(scopeNotice); else content.prepend(scopeNotice);
+    content.append(element('p', 'comparison-scope', 'Buscamos en todas las farmacias del catálogo, aunque hayas filtrado una. Precios de la fecha indicada, sin envío ni descuentos personalizados.'));
+  }
+  $('savings-dialog').showModal();
+  $('close-savings').focus();
+}
+$('close-savings').addEventListener('click', () => $('savings-dialog').close());
+$('savings-dialog').addEventListener('click', event => {
+  if (event.target !== $('savings-dialog')) return;
+  const rect = event.target.getBoundingClientRect();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) event.target.close();
+});
 $('search-form').addEventListener('submit', event => { event.preventDefault(); search($('search').value); });
 $('search').addEventListener('input', () => search($('search').value));
 $('group').addEventListener('change', renderOffers);
@@ -69,8 +157,8 @@ async function loadCatalog() {
   try {
     const response = await fetch(new URL('data/precios.csv', import.meta.url), { cache: 'no-cache' });
     if (!response.ok) throw new Error(`No se pudo cargar el catálogo (HTTP ${response.status}).`);
-    const sourceRows = parseCSV(await response.text());
-    const { accepted, rejected } = validateRows(sourceRows); catalog = accepted; rejectedCount = rejected.length;
+    const sourceRows = parseCSV(await response.text()); allRecords = sourceRows;
+    const { accepted, rejected } = validateRows(sourceRows); catalog = accepted; otherRecords = rejected; rejectedCount = rejected.length;
     if (!catalog.length) throw new Error('Todavía no hay ofertas verificables en el catálogo.');
     const pharmacies = [...new Set(catalog.map(r => r.farmacia))].sort();
     $('pharmacy').replaceChildren(new Option('Todas las disponibles', ''), ...pharmacies.map(p => new Option(p, p)));

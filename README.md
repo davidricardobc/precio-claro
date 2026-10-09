@@ -29,6 +29,21 @@ La lista siguiente describe la **primera entrega anterior a esa unión**:
 
 ## Datos y actualización
 
+### Ahorro al seleccionar una tarjeta
+
+Toca una tarjeta o su botón **Calcular ahorro** para abrir **Misma sustancia, más barato**. La comparación económica busca el menor precio por unidad de la misma sustancia y concentración en todas las farmacias del catálogo. Muestra porcentaje, pesos por unidad, valor proporcional para la cantidad seleccionada y costo de comprar empaques completos.
+
+Si la presentación es distinta o desconocida, el panel lo advierte antes de mostrar el porcentaje. No declara intercambiabilidad de medicamentos. La lista principal sigue separada por forma y liberación. Las fichas excluidas de ella ahora se pueden revisar en **Otras presentaciones y datos pendientes**; si faltan unidades o el precio es inconsistente, el panel explica por qué no calcula ahorro.
+
+Ejemplos comprobados con el CSV del 8 de octubre:
+
+- Cozaar 50 mg de Locatel frente a Genfar de La Rebaja: **96,65 %**, COP **13.556,67** por unidad, COP **406.700** por 30 unidades.
+- Dolex Activgel 500 mg de 10 cápsulas, Locatel, frente a Genfar de Locatel: **89,59 %**, COP **1.747** por unidad, COP **17.470** por 10 unidades. Las presentaciones son distintas o insuficientemente descritas, por lo que se muestra una advertencia explícita.
+
+Fórmulas: precio exacto por unidad = precio del empaque ÷ unidades; porcentaje = (precio unitario seleccionado − mínimo) ÷ precio unitario seleccionado × 100; ahorro proporcional = diferencia unitaria × unidades seleccionadas. Se usa precisión completa para calcular y se redondea solo al mostrar. No se editó ningún precio del CSV.
+
+### Comandos
+
 ```powershell
 python scraper.py
 python scraper.py --publish

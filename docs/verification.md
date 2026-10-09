@@ -2,6 +2,17 @@
 
 Fecha: 8 de octubre de 2026. Entrega local inicial.
 
+## Actualización: panel de ahorro
+
+- **12 pruebas Node correctas** tras agregar los casos de Cozaar, Dolex Activgel, empate, menor precio, unidades ausentes, aritmética inválida, dosis distinta, enlace inválido y empaques completos. Los 12 tests Python de la entrega anterior no cambian; no se alteró el scraper.
+- Cozaar 50 mg de Locatel: Genfar de La Rebaja a COP 470/unidad, **96,65 %** y **COP 406.700** por 30 unidades.
+- Dolex Activgel 500 mg, 10 cápsulas, Locatel: Genfar de Locatel a COP 203/unidad, **89,59 %** y **COP 17.470** por 10 unidades. Advertencia de forma distinta o desconocida, antes del porcentaje.
+- Navegador: ambos ejemplos, mínimo ya alcanzado con Genfar, y ausencia de unidades con «Oferta Advil Max 400mg Pague 16 Lleve 20». Sin errores JavaScript.
+- Modal nativo: Escape cierra, devuelve el foco al botón de origen; el botón de cerrar es accesible. Enlace a fuente separado de la acción de la tarjeta.
+- Vista de **390 × 844 píxeles CSS**, comprobada con `innerWidth/innerHeight`: sin desbordamiento horizontal. Encabezado y aviso médico permanecen fuera del área interna de desplazamiento.
+- Capturas revisadas: `artifacts/savings-desktop.png` y `artifacts/savings-mobile.png`. El navegador de QA tenía zoom del 66,7 %; se ajustó el viewport de captura para verificar el ancho CSS real de 390 px.
+- Datos CSV sin modificaciones. Comparación económica por sustancia y concentración; no se afirma equivalencia terapéutica.
+
 ## Actualización: base del profesor y tres farmacias
 
 - 563 filas descargadas sin modificar en `data/base.csv`; 39 filas locales, 37 reemplazos por URL y 2 incorporaciones. Resultado: 565.

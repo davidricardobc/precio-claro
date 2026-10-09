@@ -15,6 +15,8 @@ Mostrar cómo convertir una clase en una herramienta propia: pasar de un catálo
 5. Abrir el enlace de una oferta y contrastar la presentación con la farmacia antes de grabar.
 6. Cerrar mostrando fuente, fecha y aviso médico.
 
+Nueva toma para el momento del ahorro: buscar Cozaar 50 mg, abrir su tarjeta de Locatel y mostrar **96,65 %** frente a Genfar de La Rebaja, con los valores por unidad y por 30 unidades. El dato proviene del catálogo del 8 de octubre; actualizarlo antes de grabar. Dolex Activgel también funciona como ejemplo aritmético, pero debe mostrarse junto con el aviso de presentación distinta o no identificada. No convertir ese porcentaje en una recomendación de sustitución.
+
 ## Lo que podemos decir
 
 - «Construimos nuestra versión a partir de una clase».

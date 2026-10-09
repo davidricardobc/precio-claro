@@ -92,3 +92,49 @@ export function findGroups(rows, query = '') {
   return [...groups.entries()].map(([key, offers]) => ({ key, offers: offers.sort((a, b) => a.precio / a.unidades - b.precio / b.unidades || a.precio - b.precio) }))
     .sort((a, b) => a.key.localeCompare(b.key, 'es', { numeric: true }));
 }
+
+export function matchesQuery(row, query) {
+  const text = normalize([row.producto, row.marca, row.principio_activo, row.concentracion].join(' '));
+  return normalize(query).split(/\s+/).filter(Boolean).every(word => text.includes(word));
+}
+
+export function safeProductURL(value) {
+  try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password ? url.href : null; }
+  catch { return null; }
+}
+
+function pricedRecord(source) {
+  const row = describeRow(source);
+  const units = Number(row.unidades), price = Number(row.precio), unitPrice = Number(row.precio_unidad);
+  if (!Number.isInteger(units) || units <= 0 || !Number.isFinite(price) || price <= 0
+    || !Number.isFinite(unitPrice) || unitPrice <= 0 || Math.abs(price / units - unitPrice) > .011
+    || !row.principio_activo || !row.concentracion || !safeProductURL(row.url)
+    || !Number.isFinite(Date.parse(row.fecha)) || Date.parse(row.fecha) > Date.now() + 86400000) return null;
+  return { ...row, unidades: units, precio: price, precio_unidad: unitPrice, exactUnitPrice: price / units };
+}
+
+export function calculateSavings(selected, sources) {
+  // Comparación económica pedida por la clase: sustancia + concentración.
+  // No declara equivalencia entre formas. La interfaz debe mostrar esa diferencia.
+  if (!Number.isInteger(Number(selected.unidades)) || Number(selected.unidades) <= 0) {
+    return { status: 'missing_units', selected };
+  }
+  const current = pricedRecord(selected);
+  if (!current) return { status: 'invalid_price', selected };
+  const candidates = [current, ...sources.map(pricedRecord).filter(Boolean)].filter(row =>
+    normalize(row.principio_activo) === normalize(current.principio_activo)
+    && normalize(row.concentracion) === normalize(current.concentracion));
+  const cartCost = row => Math.ceil(current.unidades / row.unidades) * row.precio;
+  candidates.sort((a, b) => a.exactUnitPrice - b.exactUnitPrice || cartCost(a) - cartCost(b)
+    || a.unidades - b.unidades || a.url.localeCompare(b.url));
+  const cheapest = candidates[0];
+  const difference = Math.max(0, current.exactUnitPrice - cheapest.exactUnitPrice);
+  const samePresentation = Boolean(current.forma && cheapest.forma && groupKey(current) === groupKey(cheapest));
+  return { status: difference < .005 ? 'already_cheapest' : 'saving', current, cheapest,
+    unitSaving: difference, percent: difference / current.exactUnitPrice * 100,
+    quantity: current.unidades, equivalentCost: cheapest.exactUnitPrice * current.unidades,
+    quantitySaving: difference * current.unidades,
+    packsNeeded: Math.ceil(current.unidades / cheapest.unidades), purchaseCost: cartCost(cheapest),
+    purchaseUnits: Math.ceil(current.unidades / cheapest.unidades) * cheapest.unidades,
+    samePresentation, candidateCount: candidates.length - 1 };
+}

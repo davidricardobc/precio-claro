@@ -47,11 +47,17 @@
         <p class="comparison-note" id="comparison-note">Consultamos precios, no indicamos tratamientos.</p>
         <div id="feedback" role="status" aria-live="polite"></div>
         <div id="results" class="results"></div>
+        <details id="other-records" class="other-records" hidden><summary id="other-records-title"></summary><p>Estas fichas no entran en el grupo anterior. Puedes revisar sus datos y la diferencia de precio por sustancia y concentración.</p><div id="other-results" class="results"></div></details>
       </div>
     </section>
     <section id="method" class="method" aria-labelledby="method-title"><div><p class="eyebrow">SIN LETRA PEQUEÑA</p><h2 id="method-title">La comparación empieza<br>por el dato correcto.</h2></div><ol><li><span>01</span><div><h3>La misma descripción</h3><p>Agrupamos por sustancia, concentración, forma y liberación declarada. Esto no certifica equivalencia terapéutica.</p></div></li><li><span>02</span><div><h3>Una unidad a la vez</h3><p>Ordenamos por el precio de cada tableta o cápsula. El valor del empaque también queda visible.</p></div></li><li><span>03</span><div><h3>Siempre puedes verificar</h3><p>Cada oferta tiene fecha y enlace. Confirma en la farmacia el valor final, disponibilidad y envío a tu ciudad.</p></div></li></ol></section>
     <p class="medical-notice"><span aria-hidden="true">ⓘ</span> PrecioClaro compara precios; no reemplaza la indicación de tu médico o farmacéutico.</p>
   </main>
+  <dialog id="savings-dialog" aria-labelledby="savings-title">
+    <div class="savings-header"><div><p class="eyebrow">EL PRECIO, EN PERSPECTIVA</p><h2 id="savings-title">Misma sustancia, más barato</h2></div><button id="close-savings" type="button" aria-label="Cerrar comparación">×</button></div>
+    <div id="savings-content"></div>
+    <p class="savings-medical">PrecioClaro compara precios; no reemplaza la indicación de tu médico o farmacéutico.</p>
+  </dialog>
   <footer><span class="footer-brand">PrecioClaro<span> · Cada unidad cuenta.</span></span><span>Proyecto independiente · Hecho en Colombia</span></footer>
   <noscript><p>Activa JavaScript para buscar. También puedes descargar <a href="data/precios.csv">el catálogo con sus fuentes</a>.</p></noscript>
 </body>

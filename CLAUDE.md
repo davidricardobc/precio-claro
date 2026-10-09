@@ -9,6 +9,8 @@ Comparador educativo de precios de medicamentos en Colombia, creado por David a 
 - La unión conserva filas sin normalizar. El navegador filtra la vista comparable sin eliminar registros del CSV. No confundir filas importadas con ofertas comparables.
 - Cada oferta muestra farmacia, fecha de consulta, presentación, precio total, precio por unidad y enlace a la fuente.
 - Comparar por principio activo, concentración, forma farmacéutica y liberación. No declarar equivalencia terapéutica ni recomendar sustituciones.
+- Excepción solicitada en la etapa de ahorro de la clase: el panel «Misma sustancia, más barato» calcula diferencias económicas por sustancia + concentración en todo el catálogo. Debe señalar explícitamente formas distintas o desconocidas, mantener el aviso médico y separar valor proporcional de costo de empaques completos. No cambia el agrupamiento conservador de la lista principal.
+- Las fichas fuera de la vista principal se pueden consultar en «Otras presentaciones y datos pendientes». Si faltan unidades o hay precios inconsistentes, no calcular ahorro.
 - Aviso visible: «PrecioClaro compara precios; no reemplaza la indicación de tu médico o farmacéutico».
 - Scraper Python con biblioteca estándar. Consultar robots.txt, User-Agent propio y pausa mínima de 1,5 segundos. Detenerse ante bloqueos; no evadir controles.
 - Descartar combinaciones, líquidos, datos ambiguos y ofertas sin disponibilidad. Guardar razones de descarte y respuestas públicas para auditoría local.

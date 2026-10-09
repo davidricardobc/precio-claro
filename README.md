@@ -2,6 +2,10 @@
 
 **Cada unidad cuenta.** Comparador educativo de precios de medicamentos en Colombia. Proyecto propio de David, desarrollado desde el material de una clase y preparado como demo de contenido. Nombre de trabajo, sin búsqueda de disponibilidad de marca.
 
+**Web:** https://davidricardobc.github.io/precio-claro/
+
+**Repositorio público:** https://github.com/davidricardobc/precio-claro
+
 ## Abrir
 
 En Windows, ejecutar `start.cmd` y abrir **http://127.0.0.1:8765**. Requiere Python 3.10 o posterior. También sirve `python serve.py` desde esta carpeta.
@@ -83,8 +87,12 @@ Node 18 o posterior solo se usa para pruebas, no para ejecutar la web. Los fixtu
 
 Detalles de pruebas y pendientes: `docs/verification.md`. Material recibido: `docs/class-notes.md`. Tomas sugeridas para la demo: `docs/video-notes.md`.
 
-## Publicar más adelante
+## Publicación en GitHub Pages
 
 Preparado para alojamiento estático con rutas relativas. Archivos públicos necesarios: `index.html`, `styles.css`, `app.mjs`, `catalog.mjs`, `data/precios.csv` y opcionalmente `data/catalog-meta.json`. El servidor local expone solo estos archivos.
 
-GitHub Pages es el destino de referencia de la clase. Todavía no se configuró un remoto ni una publicación. Antes de cualquier push o despliegue, presentar pruebas, impacto y recuperación, y esperar el sí explícito de David.
+Destino autorizado por David el 8 de octubre de 2026: repositorio público `davidricardobc/precio-claro`, rama `main` y carpeta raíz de GitHub Pages. `.nojekyll` mantiene los archivos estáticos sin procesamiento de Jekyll. Las rutas relativas permiten cargar los módulos y `data/precios.csv` bajo `/precio-claro/`.
+
+La primera publicación se autorizó en la conversación después de revisar la demo y sus pruebas. Las siguientes publicaciones siguen requiriendo aprobación explícita. Un push a `main` actualiza la web.
+
+Para retirar la web, desactivar Pages en Settings → Pages. Para recuperar una versión anterior, revertir el commit correspondiente y publicar la reversión, con aprobación. Los precios no se actualizan solos: hay que ejecutar la consulta, revisar los resultados y autorizar su publicación.

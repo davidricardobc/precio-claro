@@ -1,6 +1,21 @@
 export const normalize = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 export const GROUP_FIELDS = ['principio_activo', 'concentracion', 'forma', 'liberacion'];
-export const REQUIRED_FIELDS = ['fecha', 'farmacia', 'principio_activo', 'concentracion', 'producto', 'marca', 'presentacion', 'unidades', 'precio', 'precio_lista', 'precio_unidad', 'url', 'forma', 'liberacion'];
+export const REQUIRED_FIELDS = ['fecha', 'farmacia', 'principio_activo', 'concentracion', 'producto', 'marca', 'presentacion', 'unidades', 'precio', 'precio_lista', 'precio_unidad', 'url'];
+
+export function describeRow(source) {
+  const text = normalize(`${source.producto} ${source.presentacion}`);
+  let form = source.forma;
+  if (!form) {
+    const capsule = /\b(cap|caps|capsula|capsulas)\b/.test(text);
+    const tablet = /\b(tab|tabs|tableta|tabletas|comprimido|comprimidos)\b/.test(text);
+    form = capsule && !tablet ? 'capsula' : tablet && !capsule ? 'tableta' : '';
+  }
+  const special = /\b(ml|jarabe|suspension|gotas|solucion|inyectable|crema|gel|emulgel|polvo|sobres?|masticables?|efervescentes?|sublingual|bucodispersable|blandas?|liquid[ao]s?|liqui|activgel)\b/.test(text);
+  let release = source.liberacion || 'no especificada';
+  if (/\b(xr|sr|cr|lp|retard)\b|liberacion (prolongada|modificada|retardada)/.test(text)) release = 'modificada';
+  if (/gastroresistente|enteric/.test(text)) release = 'recubrimiento especial';
+  return { ...source, forma: special ? '' : form, liberacion: release };
+}
 
 export function parseCSV(text) {
   const matrix = []; let row = [], cell = '', quoted = false, closed = false;
@@ -39,7 +54,8 @@ export function parseCSV(text) {
 
 export function validateRows(rows) {
   const accepted = [], rejected = []; const seen = new Set();
-  for (const row of rows) {
+  for (const source of rows) {
+    const row = describeRow(source);
     const price = Number(row.precio), units = Number(row.unidades), unitPrice = Number(row.precio_unidad);
     let url; try { url = new URL(row.url); } catch { /* rejected below */ }
     const valid = Number.isFinite(price) && price > 0 && Number.isInteger(units) && units > 0
@@ -51,7 +67,7 @@ export function validateRows(rows) {
       && url?.protocol === 'https:' && !url.username && !url.password
       && !/[+\/]/.test(row.principio_activo) && /^\d+(?:\.\d+)? (?:MG|MCG)$/.test(row.concentracion);
     if (!valid) { rejected.push(row); continue; }
-    const identity = `${row.farmacia}|${row.url}|${row.sku || ''}|${groupKey(row)}`;
+    const identity = `${row.farmacia}|${row.url}|${row.sku || ''}|${row.unidades}|${normalize(row.presentacion)}|${groupKey(row)}`;
     if (seen.has(identity)) { rejected.push(row); continue; }
     seen.add(identity);
     accepted.push({ ...row, precio: price, unidades: units, precio_unidad: unitPrice, precio_lista: Number(row.precio_lista) || null });

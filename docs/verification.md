@@ -2,6 +2,18 @@
 
 Fecha: 8 de octubre de 2026. Entrega local inicial.
 
+## Actualización: base del profesor y tres farmacias
+
+- 563 filas descargadas sin modificar en `data/base.csv`; 39 filas locales, 37 reemplazos por URL y 2 incorporaciones. Resultado: 565.
+- Comprobación independiente de preservación de valores: el multiconjunto de filas finales coincide exactamente con base sin coincidencias de La Rebaja más consulta local. Las tres entradas/salidas comparten las 12 columnas del profesor.
+- Resumen y ranking calculados con Decimal; segundo cálculo independiente confirmó las tres mayores diferencias.
+- Pruebas actuales: **12 Python y 8 Node correctas**, incluyendo ausencia de archivo local, conservación de variantes, rechazo de esquema inválido y nueva consulta que mantiene las farmacias importadas.
+- Navegador: 565 registros, 498 ofertas comparables, tres farmacias en el filtro. Losartán 50 mg: 18 ofertas, distribuidas en 4 de La Rebaja, 6 de Locatel y 8 de Olímpica. Vista de 390 px sin desbordamiento horizontal.
+- Las 67 filas no comparables siguen disponibles en el CSV. No se rellenaron los 10 precios unitarios ausentes.
+- Se conservan las limitaciones de equivalencia terapéutica y de inventario por ciudad. Los datos de Locatel y Olímpica fueron importados, sin volver a consultar sus fichas.
+
+La evidencia siguiente corresponde a la primera entrega de una farmacia y se conserva como historial.
+
 Recorrido: catálogo público de La Rebaja → scraper → CSV validado → búsqueda en el navegador → presentación del precio por unidad → enlace de origen.
 
 ## Evidencia

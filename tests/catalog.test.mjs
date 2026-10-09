@@ -41,10 +41,26 @@ test('buscar marca mantiene otras marcas del mismo grupo descriptivo', () => {
   const data = validateRows([row, { ...row, marca: 'Alternativa', url: 'https://example.org/b' }]).accepted;
   assert.equal(findGroups(data, 'Alternativa')[0].offers.length, 2);
 });
-test('el catálogo real pasa validación completa sin duplicados', () => {
+test('el catálogo unido conserva datos de tres farmacias y separa filas no comparables', () => {
   const rows = parseCSV(readFileSync(new URL('../data/precios.csv', import.meta.url), 'utf8'));
   const { accepted, rejected } = validateRows(rows);
-  assert.equal(rejected.length, 0);
+  assert.equal(accepted.length + rejected.length, rows.length);
   assert.ok(accepted.length > 0);
-  assert.ok(accepted.every(r => r.farmacia === 'La Rebaja'));
+  assert.equal(new Set(accepted.map(r => r.farmacia)).size, 3);
+  assert.ok(rejected.some(r => !r.precio_unidad));
+});
+
+test('CSV de 12 columnas infiere forma y conserva variantes con la misma URL', () => {
+  const plain = Object.fromEntries(REQUIRED_FIELDS.map(key => [key, row[key]]));
+  const { accepted } = validateRows([plain, { ...plain, unidades: '20', precio: '18000', precio_unidad: '900', presentacion: 'Caja x 20 tabletas' }]);
+  assert.equal(accepted.length, 2);
+  assert.equal(accepted[0].forma, 'tableta');
+});
+
+test('no mezcla tabletas comunes con masticables, líquidos o liberación modificada', () => {
+  const plain = Object.fromEntries(REQUIRED_FIELDS.map(key => [key, row[key]]));
+  assert.equal(validateRows([{ ...plain, producto: 'Tabletas masticables' }]).accepted.length, 0);
+  assert.equal(validateRows([{ ...plain, producto: 'Solución 50 mg/5 ml' }]).accepted.length, 0);
+  const extended = { ...plain, producto: 'Losartan 50 mg XR', url: 'https://example.org/xr' };
+  assert.equal(findGroups(validateRows([plain, extended]).accepted).length, 2);
 });

@@ -155,11 +155,11 @@ class Client:
         return text
 
 
-def write_csv(path, rows):
+def write_csv(path, rows, fields=FIELDS):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix('.tmp')
     with temporary.open('w', newline='', encoding='utf-8') as handle:
-        writer = csv.DictWriter(handle, fieldnames=FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction='ignore')
         writer.writeheader()
         writer.writerows(rows)
     temporary.replace(path)
@@ -215,25 +215,40 @@ def main():
     report['filas_validas'] = len(rows)
     report['productos_unicos'] = len(seen)
     report['resumen_descartes'] = dict(Counter(d['razon'] for d in report['descartes']))
+    if rows and not report['errores']:
+        write_csv(ROOT / 'data' / 'scrapeado-hoy.csv', rows, FIELDS[:12])
     if args.publish and rows and not report['errores']:
-        target = ROOT / 'data' / 'precios.csv'
-        if target.exists():
-            archive = ROOT / 'data' / 'archive'
-            archive.mkdir(exist_ok=True)
-            (archive / f'prices-{now.strftime("%Y%m%dT%H%M%S")}.csv').write_bytes(target.read_bytes())
-        write_csv(target, rows)
-        report['publicado'] = True
-        # Se actualiza solo junto a un catálogo válido; no oculta fallas posteriores.
-        (ROOT / 'data' / 'catalog-meta.json').write_text(json.dumps({
-            'consultado_en': stamp, 'farmacias': ['La Rebaja'], 'filas': len(rows),
-            'alcance': 'Consulta manual; sin ubicación de entrega. No incluye transporte.',
-            'fuente': BASE, 'terminos': args.terms}, ensure_ascii=False, indent=2), encoding='utf-8')
+        try:
+            if (ROOT / 'data' / 'base.csv').exists():
+                from merge_data import merge_catalog
+                merge_catalog(ROOT)
+                report['publicado'] = True
+            else:
+                publish_single_source(rows, report, stamp, now, args)
+        except (OSError, ValueError) as error:
+            report['errores'].append(f'Unión detenida: {error}')
+            print('No se actualizó el catálogo:', error, file=sys.stderr)
     (ROOT / 'data' / 'scrape-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f'{len(rows)} ofertas válidas. CSV web actualizado: {report["publicado"]}')
     for row in rows:
         if row['principio_activo'] == 'losartan':
             print(f'  {row["producto"]} | {row["presentacion"]} | COP {row["precio"]} | COP {row["precio_unidad"]}/unidad')
     return 1 if report['errores'] or not rows else 0
+
+
+def publish_single_source(rows, report, stamp, now, args):
+    target = ROOT / 'data' / 'precios.csv'
+    if target.exists():
+        archive = ROOT / 'data' / 'archive'
+        archive.mkdir(exist_ok=True)
+        (archive / f'prices-{now.strftime("%Y%m%dT%H%M%S")}.csv').write_bytes(target.read_bytes())
+    write_csv(target, rows, FIELDS[:12])
+    report['publicado'] = True
+    # Se actualiza solo junto a un catálogo válido; no oculta fallas posteriores.
+    (ROOT / 'data' / 'catalog-meta.json').write_text(json.dumps({
+        'consultado_en': stamp, 'farmacias': ['La Rebaja'], 'filas': len(rows),
+        'alcance': 'Consulta manual; sin ubicación de entrega. No incluye transporte.',
+        'fuente': BASE, 'terminos': args.terms}, ensure_ascii=False, indent=2), encoding='utf-8')
 
 
 if __name__ == '__main__':

@@ -35,3 +35,9 @@ Diferencias observadas al ejecutar:
 3. Ampliar la normalización solo con evidencia suficiente.
 4. Definir frecuencia y condiciones de actualización cuando se pida automatización.
 5. Revisar la demo antes de autorizar una publicación.
+
+## Captura 4: descargar, unir y explicar la base
+
+Recibida e implementada el 8 de octubre. Se descargó `https://raw.githubusercontent.com/celismx/recetapp-datos/main/data/precios.csv` en `data/base.csv`, con 563 filas y 12 columnas. Se unió con nuestra consulta por URL de La Rebaja, con preferencia por la local. La salida conserva exactamente esas 12 columnas. El caso sin consulta local está implementado y probado.
+
+Resultado: 565 filas, 25 principios activos, 98,23 % con precio por unidad. Ver `docs/data-summary.md` para el desglose por farmacia y las tres diferencias mayores entre marcas. El punto 1 de pendientes queda completado; las fuentes Locatel y Olímpica ya están importadas, pero sus scrapers propios siguen pendientes.

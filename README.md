@@ -10,6 +10,12 @@ No abrir `index.html` por doble clic: el navegador necesita HTTP para leer el CS
 
 ## Primera entrega, 8 de octubre de 2026
 
+**Actualización con la base de la clase:** el catálogo actual tiene **565 filas** (La Rebaja: 164, Locatel: 189, Olímpica: 212), **25 principios activos** y **555 precios por unidad (98,23 %)**. El navegador admite 498 ofertas para comparación y conserva las otras 67 en el CSV descargable. Detalle en `docs/data-summary.md`.
+
+La base original queda en `data/base.csv`. `data/scrapeado-hoy.csv` conserva nuestra consulta del 8 de octubre. Ejecutar `python merge_data.py` para unirlas nuevamente. Las 37 coincidencias por URL de La Rebaja usan la consulta local y se incorporan 2 URL nuevas. Si falta el archivo local, se usa solo la base. No se volvieron a consultar Locatel ni Olímpica.
+
+La lista siguiente describe la **primera entrega anterior a esa unión**:
+
 - Marca PrecioClaro, diseño adaptable a celular y escritorio.
 - Búsqueda por principio activo o marca, tolerante a tildes y mayúsculas.
 - Grupos separados por principio activo, concentración, forma y liberación declarada.
@@ -28,7 +34,7 @@ python scraper.py
 python scraper.py --publish
 ```
 
-El primer comando prepara `data/scrape-latest.csv` y `data/scrape-report.json`. El segundo también actualiza el catálogo **local** de la web en `data/precios.csv`, solo si terminó la consulta completa y hay registros válidos. `--publish` no hace push ni despliegue.
+El primer comando prepara `data/scrape-latest.csv` y `data/scrape-report.json`; cuando la ejecución es completa, actualiza `data/scrapeado-hoy.csv`. El segundo también une esa consulta con `data/base.csv` para actualizar el catálogo **local** en `data/precios.csv`. Si no hay base, usa solo la consulta. `--publish` no hace push ni despliegue.
 
 Las respuestas originales y robots.txt se guardan en `data/raw/<fecha-hora>/`; las versiones anteriores del catálogo, en `data/archive/`. Ambas carpetas quedan fuera de Git. Ante errores de red, bloqueos o paginación incompleta, se conserva el CSV publicado anterior. El informe de ejecución registra la falla.
 
@@ -36,15 +42,15 @@ El scraper consulta losartán, acetaminofén, ibuprofeno, atorvastatina, metform
 
 Columnas del CSV:
 
-`fecha,farmacia,principio_activo,concentracion,producto,marca,presentacion,unidades,precio,precio_lista,precio_unidad,url,forma,liberacion,sku`
+`fecha,farmacia,principio_activo,concentracion,producto,marca,presentacion,unidades,precio,precio_lista,precio_unidad,url`
 
-Los precios originales son los del campo `Price` de VTEX, en pesos, no centavos. `precio_unidad` se calcula automáticamente con redondeo a dos decimales. No editar precios a mano. Si llega el CSV del profesor, se revisará su esquema, procedencia y fecha antes de importarlo.
+Los precios originales de nuestra consulta son los del campo `Price` de VTEX, en pesos, no centavos. El scraper calcula `precio_unidad` automáticamente con redondeo a dos decimales. Los valores del profesor se preservan tal como vienen. No editar precios a mano ni rellenar los 10 valores faltantes. El archivo técnico `scrape-latest.csv` conserva además forma, liberación y SKU; el CSV público mantiene las 12 columnas de la clase.
 
 ## Límites de la comparación
 
 - Consulta manual del catálogo público, sin ciudad de entrega ni sesión de comprador. No incorpora domicilio, descuentos personalizados o comprobación de inventario en tiempo real.
 - El mínimo mostrado corresponde únicamente al grupo y las farmacias visibles. No afirma ser el menor precio de Colombia.
-- El catálogo presenta inconsistencias. Se exige que la sustancia declarada también aparezca en el nombre; las marcas sin esa corroboración se dejan fuera para revisión. Esto reduce cobertura deliberadamente.
+- Nuestra extracción exige corroborar la sustancia en el nombre. La base de la clase conserva su clasificación original y sus marcas; importar no significa que se haya verificado cada ficha de nuevo.
 - Se excluyen mezclas, líquidos, venta fraccionada, kits, variantes ambiguas, liberación modificada explícita, formas especiales y ofertas sin disponibilidad.
 - La ausencia de información sobre liberación se muestra como **no especificada**, nunca como inmediata. La agrupación es descriptiva y no certifica equivalencia terapéutica.
 - Los datos públicos pueden contener otros errores. Hay que confirmar presentación, precio final y disponibilidad en la farmacia.

@@ -1,0 +1,123 @@
+{
+  "filas": 565,
+  "filas_por_farmacia": {
+    "La Rebaja": 164,
+    "Locatel": 189,
+    "Olímpica": 212
+  },
+  "principios_activos": 25,
+  "filas_con_precio_unidad": 555,
+  "porcentaje_con_precio_unidad": 98.23,
+  "filas_sin_precio_unidad": 10,
+  "urls_con_varias_filas": 7,
+  "top_3_diferencias": [
+    {
+      "principio_activo": "AZITROMICINA",
+      "concentracion": "500 MG",
+      "diferencia_cop": "32416.67",
+      "menor": {
+        "fecha": "2026-10-08",
+        "farmacia": "La Rebaja",
+        "principio_activo": "AZITROMICINA",
+        "concentracion": "500 MG",
+        "producto": "AZITROMICINA 500 MG (MEMPHIS)",
+        "marca": "MEMPHIS",
+        "presentacion": "CAJA X 3 TAB",
+        "unidades": "3",
+        "precio": "12000",
+        "precio_lista": "12000",
+        "precio_unidad": "4000.0",
+        "url": "https://www.larebajavirtual.com/azitromicina-500-mg-memphis-156439/p"
+      },
+      "mayor": {
+        "fecha": "2026-10-08",
+        "farmacia": "Olímpica",
+        "principio_activo": "AZITROMICINA",
+        "concentracion": "500 MG",
+        "producto": "Tromix Azitromicina 500 Mg Lafrancol X3 Tabletas",
+        "marca": "Lafrancol Farma",
+        "presentacion": "TROMIX AZITROMICINA 500 MG LAFRANCOL X3 TABLETAS TROMIX 500 MG CAJA X 3 TABLETAS",
+        "unidades": "3",
+        "precio": "109250",
+        "precio_lista": "109250",
+        "precio_unidad": "36416.67",
+        "url": "https://www.olimpica.com/tromix-500-mg-caja-x-3-tabletas-7702870000649-491073/p"
+      }
+    },
+    {
+      "principio_activo": "SILDENAFIL",
+      "concentracion": "100 MG",
+      "diferencia_cop": "23900.0",
+      "menor": {
+        "fecha": "2026-10-08",
+        "farmacia": "Locatel",
+        "principio_activo": "SILDENAFIL",
+        "concentracion": "100 MG",
+        "producto": "Sildenafil 100Mg Ag X 1 Tableta",
+        "marca": "American Generics",
+        "presentacion": "SILDENAFIL 100MG AG X 1 TABLETA",
+        "unidades": "1",
+        "precio": "12500",
+        "precio_lista": "12500",
+        "precio_unidad": "12500.0",
+        "url": "https://www.locatelcolombia.com/7706569020857-sildenafil-100mg-ag-x-1-tableta/p"
+      },
+      "mayor": {
+        "fecha": "2026-10-08",
+        "farmacia": "La Rebaja",
+        "principio_activo": "SILDENAFIL",
+        "concentracion": "100 MG",
+        "producto": "VIAGRA 100 MG",
+        "marca": "VIAGRA",
+        "presentacion": "CAJA X 1 TAB",
+        "unidades": "1",
+        "precio": "36400",
+        "precio_lista": "36400",
+        "precio_unidad": "36400.0",
+        "url": "https://www.larebajavirtual.com/viagra-100-mg-31573/p"
+      }
+    },
+    {
+      "principio_activo": "ROSUVASTATINA",
+      "concentracion": "40 MG",
+      "diferencia_cop": "23509.29",
+      "menor": {
+        "fecha": "2026-10-08",
+        "farmacia": "Olímpica",
+        "principio_activo": "ROSUVASTATINA",
+        "concentracion": "40 MG",
+        "producto": "Rosuvastatina 40 Mg MK X28 Tabletas",
+        "marca": "Mkgenerico",
+        "presentacion": "ROSUVASTATINA 40 MG MK X28 TABLETAS ROSUVASTATINA 40 MG CAJA 28 TABLETAS MK",
+        "unidades": "28",
+        "precio": "50700",
+        "precio_lista": "50700",
+        "precio_unidad": "1810.71",
+        "url": "https://www.olimpica.com/rosuvastatina-40-mg-caja-28-tabletas-mk-7702057062187-1027995/p"
+      },
+      "mayor": {
+        "fecha": "2026-10-08",
+        "farmacia": "Olímpica",
+        "principio_activo": "ROSUVASTATINA",
+        "concentracion": "40 MG",
+        "producto": "Cardiomax Rosuvastatina 40 Mg Caja X 10 Tabletas",
+        "marca": "Lafrancol Farma",
+        "presentacion": "CARDIOMAX ROSUVASTATINA 40 MG CAJA X 10 TABLETAS CARDIOMAX 40 MG CAJA X 10 TABLETAS",
+        "unidades": "10",
+        "precio": "253200",
+        "precio_lista": "253200",
+        "precio_unidad": "25320.0",
+        "url": "https://www.olimpica.com/cardiomax-40-mg-caja-x-10-tabletas-7702870004333-1607741/p"
+      }
+    }
+  ],
+  "base_url": "https://raw.githubusercontent.com/celismx/recetapp-datos/main/data/precios.csv",
+  "base_sha256": "7f0ae100d0d29fcf884d2d9f441ab418b53802dbbffa5447663ed1f7adaa1ba6",
+  "filas_base": 563,
+  "filas_consulta_local": 39,
+  "filas_base_reemplazadas": 37,
+  "filas_nuevas": 2,
+  "consulta_local_presente": true,
+  "generado_en": "2026-10-09T01:41:13+00:00",
+  "metodo_ranking": "Mayor diferencia absoluta de precio_unidad entre marcas distintas dentro de principio_activo + concentracion. Describe los datos; no afirma equivalencia de formas farmacéuticas."
+}

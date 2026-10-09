@@ -5,6 +5,8 @@ Comparador educativo de precios de medicamentos en Colombia, creado por David a 
 - Web estática: HTML, CSS y JavaScript, sin frameworks ni compilación. Compatible con GitHub Pages mediante rutas relativas.
 - Interfaz en español de Colombia; moneda COP. Diseño primero para celular.
 - El navegador lee `data/precios.csv`. Nunca inventar ni editar precios a mano. Los datos sintéticos se limitan a pruebas aisladas.
+- `data/base.csv` conserva la descarga original de la clase. `merge_data.py` une esa base con `data/scrapeado-hoy.csv` en las mismas 12 columnas. Por URL de La Rebaja gana la consulta local. Si no existe, usar solo la base. Conservar variantes de otras farmacias y valores faltantes.
+- La unión conserva filas sin normalizar. El navegador filtra la vista comparable sin eliminar registros del CSV. No confundir filas importadas con ofertas comparables.
 - Cada oferta muestra farmacia, fecha de consulta, presentación, precio total, precio por unidad y enlace a la fuente.
 - Comparar por principio activo, concentración, forma farmacéutica y liberación. No declarar equivalencia terapéutica ni recomendar sustituciones.
 - Aviso visible: «PrecioClaro compara precios; no reemplaza la indicación de tu médico o farmacéutico».
@@ -19,7 +21,9 @@ Comparador educativo de precios de medicamentos en Colombia, creado por David a 
 
 `python scraper.py` consulta y crea `data/scrape-latest.csv` sin cambiar el catálogo de la web.
 
-`python scraper.py --publish` actualiza también `data/precios.csv` si todas las consultas terminaron y hay filas válidas.
+`python scraper.py --publish` actualiza la consulta local y vuelve a unir con la base si existe. Nunca reemplaza el catálogo de tres farmacias con solo La Rebaja.
+
+`python merge_data.py` regenera `data/precios.csv` y `data/merge-report.json`, sin consultar farmacias ni publicar en internet.
 
 `python -m unittest discover -s tests` prueba extracción y límites de comparación.
 

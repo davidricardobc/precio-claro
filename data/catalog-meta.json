@@ -1,21 +1,14 @@
 {
   "consultado_en": "2026-10-08T20:36:34-05:00",
   "farmacias": [
-    "La Rebaja"
+    "La Rebaja",
+    "Locatel",
+    "Olímpica"
   ],
-  "filas": 39,
-  "alcance": "Consulta manual; sin ubicación de entrega. No incluye transporte.",
-  "fuente": "https://www.larebajavirtual.com",
-  "terminos": [
-    "losartan",
-    "acetaminofen",
-    "ibuprofeno",
-    "atorvastatina",
-    "metformina",
-    "omeprazol",
-    "loratadina",
-    "amlodipino",
-    "dolex",
-    "advil"
-  ]
+  "filas": 565,
+  "fuentes": [
+    "https://raw.githubusercontent.com/celismx/recetapp-datos/main/data/precios.csv",
+    "data/scrapeado-hoy.csv"
+  ],
+  "alcance": "Base del profesor más consulta local de La Rebaja. Sin verificación nueva de Locatel u Olímpica."
 }
